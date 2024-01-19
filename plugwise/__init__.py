@@ -385,13 +385,6 @@ class Smile(SmileComm, SmileData):
             )
             raise ResponseError
 
-        # Check if Anna is connected to an Adam
-        if "159.2" in models:
-            LOGGER.error(
-                "Your Anna is connected to an Adam, make sure to only add the Adam as integration."
-            )
-            raise InvalidSetupError
-
         # Determine smile specifics
         await self._smile_detect(result, dsmrmain)
 
